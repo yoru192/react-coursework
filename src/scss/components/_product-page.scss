@@ -1,0 +1,129 @@
+﻿.product-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
+
+  .product-title {
+    color: #2c1810;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .price-badge {
+    background: #f8e9d5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+
+    span {
+      font-size: 1.8rem;
+      color: #8b572a;
+      font-weight: 600;
+    }
+  }
+
+  .specifications {
+    margin: 2rem 0;
+    background: #fff9f3;
+    padding: 2rem;
+    border-radius: 12px;
+
+    h2 {
+      color: #6b4f3b;
+      margin-bottom: 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      tr {
+        border-bottom: 1px solid #eee2d8;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        td {
+          padding: 1rem;
+          &:first-child {
+            font-weight: 500;
+            color: #8b572a;
+            width: 40%;
+          }
+          &:last-child {
+            color: #2c1810;
+          }
+        }
+      }
+    }
+  }
+
+  .product-description {
+    margin: 3rem 0;
+    line-height: 1.6;
+
+    h2 {
+      color: #6b4f3b;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #4a3527;
+      font-size: 1.1rem;
+    }
+  }
+
+  .product-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+
+    .feature-block {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+      h3 {
+        color: #8b572a;
+        margin-bottom: 1rem;
+      }
+
+      .rating {
+        font-size: 1.4rem;
+        color: #d4a259;
+        font-weight: 600;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          padding: 0.5rem 0;
+          color: #4a3527;
+          &::before {
+            content: "✓";
+            color: #d4a259;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .order-notice {
+    background: #f8f4f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+
+    p {
+      color: #6b4f3b;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}

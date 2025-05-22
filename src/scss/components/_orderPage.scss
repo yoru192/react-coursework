@@ -1,0 +1,221 @@
+﻿// Variables to match your React Cake design
+$primary-color: #0a3b6c; // Dark blue from your cart button
+$background-color: #f9f5f0; // Cream background
+$text-color: #333;
+$border-color: #e5e5e5;
+$error-color: #e35050;
+
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-header {
+  margin-bottom: 30px;
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    color: $primary-color;
+    font-weight: 600;
+  }
+}
+
+.checkout-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+// Cart items styling
+.cart-items-table {
+  width: 100%;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .table-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 50px;
+    padding: 12px 16px;
+    background-color: #f8f8f8;
+    font-weight: 600;
+    font-size: 14px;
+    color: $text-color;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 50px;
+    padding: 16px;
+    border-bottom: 1px solid $border-color;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .column {
+    &.product {
+      font-weight: 500;
+    }
+
+    &.quantity, &.price, &.total {
+      text-align: center;
+    }
+
+    &.total {
+      font-weight: 600;
+    }
+  }
+
+  .remove-button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+
+    &:hover {
+      background-color: $error-color;
+      color: white;
+    }
+  }
+
+  .table-footer {
+    background-color: #f8f8f8;
+    padding: 16px;
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-weight: 500;
+
+      &:last-child {
+        margin-top: 8px;
+        padding-top: 12px;
+        border-top: 1px solid $border-color;
+        font-weight: 600;
+
+        .total-amount {
+          font-size: 18px;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// Delivery details styling
+.delivery-details {
+  width: 100%;
+  margin-top: 20px;
+
+  h2 {
+    font-size: 18px;
+    color: $primary-color;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .required-fields {
+    color: $error-color;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .delivery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      label {
+        font-size: 14px;
+        font-weight: 500;
+        color: $text-color;
+      }
+
+      input {
+        height: 40px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        padding: 0 12px;
+        font-size: 16px;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+        }
+      }
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 16px;
+
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
+
+      button {
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &.back-button {
+          background-color: #f0f0f0;
+          color: $text-color;
+          border: 1px solid $border-color;
+
+          &:hover {
+            background-color: #e5e5e5;
+          }
+        }
+
+        &.order-button {
+          background-color: $primary-color;
+          color: white;
+          border: none;
+          flex: 1;
+
+          &:hover {
+            background-color: darken($primary-color, 5%);
+          }
+        }
+      }
+    }
+  }
+}

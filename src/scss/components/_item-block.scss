@@ -1,0 +1,50 @@
+.item-block {
+  width: 280px;
+  text-align: center;
+  margin-bottom: 65px;
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 260px;
+    height: 200px;
+    margin-bottom: 12px; // додано для естетики
+  }
+
+  &__title {
+    height: 50px;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 6px; // трохи зменшено для компактності
+  }
+
+  &__weight {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; // замість margin між елементами
+  }
+
+  &__price-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px; // трохи відступів зліва/справа для візуального балансу
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0d3b66;
+  }
+}
